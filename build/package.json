@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsx build.ts"
+    "build-single-exchange": "tsx build.ts",
+    "pypi-packager": "tsx pypi-packager.ts",
+
+    "sample-generate": "cd ../.github/scripts/ && bash generate-exchange-skeleton.sh ../../../tmp_folder kucoin",
+    "sample-build": "cd ../../tmp_folder/build && npm run build-single-exchange",
+    "sample-pypi": "cd ../../tmp_folder/build && npm run pypi-packager",
+    "sample-all": "npm run sample-generate && cd ../../tmp_folder/build && npm run build-single-exchange && npm run pypi-packager"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "extract-zip": "^2.0.1",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "fs": "*",
+    "path": "*",
+    "semver": "^7.7.1"
   },
   "devDependencies": {
     "tsx": "^4.19.3"

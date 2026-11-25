@@ -5,8 +5,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-.hyperliquid/
-
 # C extensions
 *.so
 
@@ -175,3 +173,4 @@ cython_debug/
 .pypirc
 
 build/ccxt
+/build/package-lock.json

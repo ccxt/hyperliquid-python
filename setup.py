@@ -10,11 +10,10 @@ here = path.abspath(path.dirname(__file__))
 root = path.dirname(here)
 
 readme = path.join(here, 'README.md')
-package_json = path.join(here, 'build/package-meta.json')
-
+package_json = path.join(here, 'meta.json')
 # a workaround when installing locally from git repository with pip install -e .
 if not path.isfile(package_json):
-    package_json = path.join(root, 'build/package-meta.json')
+    package_json = path.join(root, 'meta.json')
 
 # long description from README file
 with open(readme, encoding='utf-8') as f:
@@ -24,19 +23,10 @@ with open(readme, encoding='utf-8') as f:
 with open(package_json, encoding='utf-8') as f:
     package = json.load(f)
 
-project_urls = {
-    'Homepage': 'https://ccxt.com',
-    'Documentation': 'https://github.com/ccxt/ccxt/wiki',
-    'Discord': 'https://discord.gg/ccxt',
-    'Twitter': 'https://twitter.com/ccxt_official',
-    'Funding': 'https://opencollective.com/ccxt',
-}
-
 raw_version = package['version']
 version = '0.' + raw_version[2:]
 
 setup(
-
     name=package['name'],
     version=version,
     description=package['description'],
@@ -61,12 +51,7 @@ setup(
         'Topic :: Software Development :: Build Tools',
         'Topic :: Office/Business :: Financial :: Investment',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11',
         'Programming Language :: JavaScript',
@@ -77,20 +62,20 @@ setup(
 
     keywords=package['keywords'],
 
+    python_requires='>=3.10',
+
     install_requires=[
         'setuptools>=60.9.0',
         'certifi>=2018.1.18',
         'requests>=2.18.4',
         'cryptography>=2.6.1',
-        'typing_extensions>=4.4.0'
+        'typing_extensions>=4.4.0',
+        'aiohttp>=3.14.4,<3.15',
+        'aiodns>=1.1.1',
+        'yarl>=1.7.2',
     ],
 
     extras_require={
-        ':python_version>="3.5.2"': [
-            'aiohttp<=3.10.11',
-            'aiodns>=1.1.1',
-            'yarl>=1.7.2',
-        ],
         'qa': [
             'ruff==0.0.292',
             'tox>=4.8.0',
@@ -99,5 +84,5 @@ setup(
             'mypy==1.6.1',
         ],
     },
-    project_urls=project_urls,
+    project_urls=package['project_urls'],
 )

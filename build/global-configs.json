@@ -1,0 +1,74 @@
+{
+    "exchanges" : {
+        "bingx": {
+            "__PYTHON_PACKAGE_NAME__": "bingx"
+        },
+        "bitget": {
+            "__PYTHON_PACKAGE_NAME__": "bitget"
+        },
+        "binance": {
+            "__PYTHON_PACKAGE_NAME__": "binance"
+        },
+        "bybit": {
+            "__LINK_TO_OFFICIAL_EXCHANGE_DOCS__": "https://bybit.com/apidocs1",
+            "__PYTHON_PACKAGE_NAME__": "bybit-api"
+        },
+        "coinex": {
+            "__PYTHON_PACKAGE_NAME__": "coinex-api"
+        },
+        "cryptocom": {
+            "__PYTHON_PACKAGE_NAME__": "crypto-com-sdk"
+        },
+        "gate": {
+            "__PYTHON_PACKAGE_NAME__": "gate-io-api"
+        },
+        "hashkey": {
+            "__PYTHON_PACKAGE_NAME__": "hashkey"
+        },
+        "htx": {
+            "__PYTHON_PACKAGE_NAME__": "htx"
+        },
+        "hyperliquid": {
+            "__PYTHON_PACKAGE_NAME__": "hyperliquid",
+            "__EXAMPLE_SYMBOL__": "BTC/USDC:USDC"
+        },
+        "kucoin": {
+            "__PYTHON_PACKAGE_NAME__": "kucoin-api"
+        },
+        "kucoinfutures": {
+            "__PYTHON_PACKAGE_NAME__": "kucoin-futures-api"
+        },
+        "mexc": {
+            "__PYTHON_PACKAGE_NAME__": "mexc-exchange-api"
+        },
+        "okx": {
+            "__PYTHON_PACKAGE_NAME__": "okx-exchange"
+        },
+        "woo": {
+            "__PYTHON_PACKAGE_NAME__": "woo-api"
+        },
+        "woofipro": {
+            "__PYTHON_PACKAGE_NAME__": "woofipro-api"
+        }
+    },
+    "keywords": [
+        "crypto",
+        "currencies",
+        "coin",
+        "bitcoin",
+        "btc",
+        "ethereum",
+        "eth",
+        "cryptocurrency",
+        "exchange", 
+        "trading",
+        "library",
+        "api",
+        "rest",
+        "sdk",
+        "websocket",
+        "ws",
+        "ccxt",
+        "library"
+    ]
+}
