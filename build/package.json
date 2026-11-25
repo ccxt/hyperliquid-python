@@ -6,7 +6,6 @@
   "scripts": {
     "build-single-exchange": "tsx build.ts",
     "pypi-packager": "tsx pypi-packager.ts",
-
     "sample-generate": "cd ../.github/scripts/ && bash generate-exchange-skeleton.sh ../../../tmp_folder kucoin",
     "sample-build": "cd ../../tmp_folder/build && npm run build-single-exchange",
     "sample-pypi": "cd ../../tmp_folder/build && npm run pypi-packager",
@@ -17,7 +16,8 @@
   "dependencies": {
     "fs": "*",
     "path": "*",
-    "semver": "^7.7.1"
+    "semver": "^7.7.1",
+    "typescript": "^7.0.2"
   },
   "devDependencies": {
     "tsx": "^4.19.3"
